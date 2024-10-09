@@ -7,8 +7,15 @@ use App\Models\Desa;
 
 class DesaController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return Desa::all();
+        $search = $request->input('search');
+
+        $desas = Desa::when($search, function ($query) use ($search) {
+                return $query->where('name', 'like', "%{$search}%");
+            })
+            ->paginate(10);
+
+        return $desas;
     }
 }
