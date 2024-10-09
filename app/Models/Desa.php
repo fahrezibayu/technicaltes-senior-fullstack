@@ -9,10 +9,10 @@ class Desa extends Model
 {
     use HasFactory;
 
-    protected $table = 'desas'; // Nama tabel
+    protected $table = 'desas';
 
     protected $fillable = [
-        'kode_desa ',
+        'kode_desa',
         'name',
         'kode_kecamatan',
         'kode_ta',
@@ -21,4 +21,13 @@ class Desa extends Model
         'status'
     ];
 
+    public function kecamatan()
+    {
+        return $this->belongsTo(Kecamatan::class, 'kode_kecamatan', 'kode_kecamatan');
+    }
+
+    public function targetArea()
+    {
+        return $this->belongsTo(TargetArea::class, 'kode_ta', 'area_code');
+    }
 }

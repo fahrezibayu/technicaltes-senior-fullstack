@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DesaController;
+use App\Http\Controllers\MasterController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,4 +17,6 @@ use App\Http\Controllers\DesaController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/desa', [DesaController::class, 'index']);
+Route::get('/desa', [MasterController::class, 'index']);
+Route::get('/farmer', [MasterController::class, 'farmer']);
+Route::get('/facilitator', [MasterController::class, 'facilitator']);

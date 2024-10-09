@@ -5,7 +5,7 @@ import { createRouter, createWebHistory } from "vue-router"
 const routeInfos = [
     {
         path: "/",
-        component: () => import('./views/DesasPage.vue')
+        component: () => import('./views/DesaPage.vue')
     },
     {
         path: "/petani",
@@ -14,14 +14,6 @@ const routeInfos = [
     {
         path: "/fasilitator",
         component: () => import('./views/FasilitatorPage.vue')
-    },
-    {
-        path: "/targetArea",
-        component: () => import('./views/TargetAreaPage.vue')
-    },
-    {
-        path: "/targetAreaDesa",
-        component: () => import('./views/TargetAreaDesaPage.vue')
     },
 ]
 

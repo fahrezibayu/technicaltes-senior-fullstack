@@ -90,8 +90,6 @@ const navigation = [
     { name: "Desa", href: "/" },
     { name: "Petani", href: "/petani" },
     { name: "Fasilitator", href: "/fasilitator" },
-    { name: "Target Area", href: "/targetArea" },
-    { name: "Target Area Desa", href: "/targetAreaDesa" },
 ];
 
 const mobileMenuOpen = ref(false);
