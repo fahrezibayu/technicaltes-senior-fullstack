@@ -21,4 +21,9 @@ class Kecamatan extends Model
     {
         return $this->hasMany(Desa::class, 'kode_kecamatan', 'kode_kecamatan');
     }
+
+    public function kabupaten()
+    {
+        return $this->belongsTo(Kabupaten::class, 'kabupaten_no', 'kabupaten_no');
+    }
 }

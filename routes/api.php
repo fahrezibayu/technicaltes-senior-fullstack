@@ -20,3 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/desa', [MasterController::class, 'index']);
 Route::get('/farmer', [MasterController::class, 'farmer']);
 Route::get('/facilitator', [MasterController::class, 'facilitator']);
+Route::get('/kecamatan', [MasterController::class, 'kecamatan']);
+Route::get('/kabupaten', [MasterController::class, 'kabupaten']);
+Route::get('/province', [MasterController::class, 'province']);

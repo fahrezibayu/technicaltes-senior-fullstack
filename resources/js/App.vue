@@ -28,7 +28,7 @@
                         v-for="item in navigation"
                         :key="item.name"
                         :to="item.href"
-                        class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600"
+                        class="text-lg font-semibold leading-6 text-gray-900 hover:text-blue-600"
                     >
                         {{ item.name }}
                     </router-link>
