@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('app');
 });
+Route::get('/petani', function () {
+    return view('app');
+});
+Route::get('/fasilitator', function () {
+    return view('app');
+});
